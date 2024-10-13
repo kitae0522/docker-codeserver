@@ -1,0 +1,17 @@
+services:
+  code-server:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: code-server
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Seoul
+      - PASSWORD=password # Optional
+      - SUDO_PASSWORD=sudopassword # Optional
+      - DEFAULT_WORKSPACE=/config/workspace
+    volumes:
+      - ./:/config
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 8443:8443
+    restart: unless-stopped
