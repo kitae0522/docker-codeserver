@@ -25,8 +25,8 @@ echo "Installing Go..."
 wget https://golang.org/dl/go$GO_VERSION.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go$GO_VERSION.linux-amd64.tar.gz
 rm go$GO_VERSION.linux-amd64.tar.gz
-echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.bashsrc
-source ~/.bashsrc
+echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.bashrc
+source ~/.bashrc
 
 # Verify Go installation
 echo "Verifying Go installation..."
